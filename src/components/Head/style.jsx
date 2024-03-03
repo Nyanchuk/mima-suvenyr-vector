@@ -1,116 +1,152 @@
 import styled from 'styled-components';
 
 export const Body = styled.div`
-
+padding-top: 30px;
+    position: relative;
 `
+
 export const VideoWrapper = styled.div`
-  position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-
   video {
-    /* position: absolute; */
-    opacity: 0.5;
+    position: absolute;
+    z-index: -99;
+    opacity: 0.4;
     top: 0;
     left: 0;
     width: 100%;
-    height: 420px;
+    height: 500px;
     object-fit: cover;
-  }
+}
 `;
 export const BodyBurger = styled.div`
-    padding-left: calc(50% - 500px);
-    padding-right: calc(50% - 500px);
-    width: auto;
-    position: absolute;
+    margin: 0 auto; /* Центрирование содержимого */
+    max-width: 1366px; /* Максимальная ширина 1366px */
+    width: 100%; /* Чтобы контейнер занимал всю доступную ширину */
+    padding: 0 40px; /* Добавление отступов для адаптации под меньшие экраны */
+    box-sizing: border-box; /* Учитываем отступы в общую ширину */
     height: auto;
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center; /* Выравнивание содержимого по центру */
     align-items: center;
-    justify-content: center;
-`
+`;
 export const BurgerTop = styled.div`
     width: 100%;
     height: 100px;
-    margin-left: 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 10px;
 `
 export const HeaderImg = styled.img`
-    margin: 15px;
-    width: 200px;
-    height: 55px;
+    width: 130px;
+    height: 90px;
 `
 export const HeaderLink = styled.a`
     cursor: pointer;
     text-align: center;
-    color: #ebebeb;
-    font-size: 12px;
-    font-weight: 500;
+    color: #fbc663ef;
+    font-size: 20px;
+    font-weight: 300;
     border: 1px solid transparent;
     box-shadow: 0 0 5px transparent;
-    border-radius: 20px;
-    padding: 7px;
+    border-radius: 30px;
+    padding: 10px;
     transition: all .3s;
-    &:hover{
-        transform: scale(1.05);
-        color: #d6a40ffc;
-        border: 1px solid #d6a40fd5;
-        box-shadow: 0 0 5px #d6a40fd5;
-        border-radius: 20px;
+    &:hover {
+    color: #c59b4cee;
     }
+`
+export const BurgerTop2 = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: end;
 `
 export const HeaderLinkUs = styled.div`
     cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all .3s;
+    &::before {
+    content: "СВЯЗАТЬСЯ С НАМИ";
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 45px;
-    background-color: #d6a40f;
-    border: 1px solid #d6a40f;
-    border-radius: 25px;
-    color: rgb(28, 37, 47);
-    font-size: 14px;
+    text-align: center;
     font-weight: 500;
-    transition: all .3s;
-    &:hover {
-        color: rgb(28, 37, 47);
-        background-color: #ebebeb;
-        border: 1px solid #ebebeb;
-        box-shadow: 0 0 10px #ebebeb;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-image: 
+      linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%),
+      linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%);
+    background-size: 200% 100%; /* Два слоя градиента */
+    transition: background-position 0.3s;
+    
+    z-index: -1;
+} 
+&:hover::before {
+  background-position: 100% 0, 0 100%; /* Переключаемся между двумя слоями градиента */
+}
+&:active {
+    transform: scale(.95);
+}
+    /* &:hover {
+        background-color: #c69130b0;
+        border: 1px solid #c69130b0;
+        box-shadow: 0 0 3px #c69130b0;
     }
+    &:active {
+        transform: scale(.95);
+    } */
 `
 export const HeaderBottom = styled.div`
-    position: absolute;
-    margin-top: 120px;
-    top: 0;
-    left: 0;
+    margin-top: 20px;
+    padding-bottom: 80px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding-bottom: 70px;
-    gap: 25px;
-    height: 231px;
-    background: linear-gradient(to bottom, rgba(229, 205, 107, 0), rgba(255, 202, 10, 0), rgba(255, 202, 10, 0), rgba(20, 34, 49, 0.283), rgb(20, 34, 49));
+    gap: 45px;
+    height: auto;
+    /* background: linear-gradient(to bottom, rgba(229, 205, 107, 0), rgba(255, 202, 10, 0), rgba(255, 202, 10, 0), rgba(20, 34, 49, 0.283), rgb(20, 34, 49)); */
 `
 export const HeaderSlogan = styled.p`
-    font-weight: 500;
+    font-weight: 300;
     max-width: 700px;
-    font-size: 24px;
-    color: #d6a40f;
+    font-size: 18px;
+    color: #e5e5e5;
 `
-export const HeaderTitle = styled.p`
-    font-weight: 700;
-    font-size: 64px;
-    color: #ebebeb;
-`
+export const HeaderTitle = styled.div`
+font-weight: 500;
+font-size: 64px;
+padding: 15px;
+position: relative;
+
+&::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background-image: 
+    linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%),
+    linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%);
+  background-size: 200% 100%; /* Два слоя градиента */
+  transition: background-position 0.3s; /* Добавляем переход для плавного изменения градиента */
+  z-index: -1;
+} 
+
+&:hover::before {
+  background-position: 100% 0, 0 100%; /* Переключаемся между двумя слоями градиента */
+}
+`;
 export const Images = styled.div`
     display: flex;
     flex-wrap: nowrap;
@@ -130,13 +166,11 @@ export const HeaderContact = styled.img`
     border-radius: 20px;
     &:hover {
         transform: scale(1.1);
-        border: 1px solid #d6a40fcd;
-        box-shadow: 0 0 5px #d6a40fcd;
+        border: 1px solid #c69130f0;
         border-radius: 20px;
+        background-color: #c69130f0;
     }
     &:active {
-        border: 1px solid #ebebeb;
-        box-shadow: 0 0 7px #ebebeb;
-        border-radius: 20px;
+        transform: scale(1);
     }
 `

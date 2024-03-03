@@ -1,3 +1,17 @@
+# НАЗВАНИЕ ПРОЕКТА: Свенирный вектор
+# ОПИСАНИЕ ПРОЕКТА: 
+- Сайт предоставляет информацию о продуктах, вариантах их исполнения
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

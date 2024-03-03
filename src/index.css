@@ -9,6 +9,13 @@ body {
 }
 
 .center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+  margin: 0 auto; /* Центрирование содержимого */
+  max-width: 1366px; /* Максимальная ширина 1366px */
+  width: 100%; /* Чтобы контейнер занимал всю доступную ширину */
+  padding: 0 40px; /* Добавление отступов для адаптации под меньшие экраны */
+  box-sizing: border-box; /* Учитываем отступы в общую ширину */
+  height: auto;
+  display: flex;
+  justify-content: center; /* Выравнивание содержимого по центру */
+  align-items: center;
 }
