@@ -1,8 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import parallax from "./img/img:66.svg";
 import medal from './img/loon-image-original.jpeg';
 import img1 from './img/3PPL_GRP-b1263dab.webp'
-
+const swingAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+`;
 export const Wrapper = styled.div`
   height: auto;
 `;
@@ -133,7 +143,7 @@ export const Main_clientele = styled.div`
     flex-direction: column;
     gap: 35px;
     width: 100%;
-    height: 300px;
+    height: 240px;
     padding-top: 35px;
     background-color: #fdfdfd;
     color: #e8b75cee;
@@ -145,7 +155,7 @@ export const Slice = styled.div`
     margin: 0 auto;
 `
 export const Main_img = styled.img`
-    height: 150px;
+    height: 120px;
     background-size: contain;
     opacity: 0.75;
     display: block; 
@@ -158,12 +168,27 @@ export const Main_section_two = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 55px;
 `
 export const Main_section_plus = styled.div`
-    
-`
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /* Создаем 3 строки */
+    grid-template-columns: repeat(3, 1fr); /* Создаем 2 столбца */
+    gap: 30px; 
+`;
+export const Main_plus_img = styled.img`
+    width: 40px;
+    height: auto;
 
+`
+export const Main_plus_info = styled.div`
+    width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #FBC663;
+    text-align: left;
+`
 export const MainInfo = styled.div`
   color: #fdfdfd;
   font-weight: 300;
@@ -224,35 +249,69 @@ export const Parallax = styled.div`
 export const MainWhy = styled.div`
   display: flex;
   justify-content: center;
-  gap: 45px;
-`;
-export const MainItems = styled.div`
-  display: flex;
+  align-items: start;
   flex-direction: column;
   gap: 45px;
 `;
+export const MainItems = styled.div`
+    position: relative;
+    display: flex;
+    gap: 45px;
+`;
+export const ItemPount = styled.div`
+    position: absolute;
+    top: 32%;
+    left: 43px;
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(20, 34, 49);
+`
+export const MainItemImg = styled.img`
+    width: 420px;
+    height: 170px;
+    object-fit: cover;
+    opacity: .9;
+`
 export const MainItemsTwo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 48px;
 `;
-export const MainItem = styled.div`
+export const MainItem = styled.img`
   margin-top: 10px;
-  width: 30px;
-  height: 30px;
-
-  /* background-color: #fbc663ef;
-    border: 1px solid #fbc663ef; */
-  border-radius: 30px;
+  width: 100px;
+  height: 100px;
+  &:hover {
+    animation: ${swingAnimation} 0.5s infinite alternate; /* Применяем анимацию при наведении */
+  }
 `;
 export const MainItemText = styled.div`
-  width: 750px;
+  width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   color: #fbc663ef;
   height: 30px;
   text-align: start;
   font-weight: 300;
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fbc663ef;
+  border-top: 1px solid #fbc663ef;
+`;
+export const MainItemTextInfo = styled.div`
+  width: 330px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 10px;
+  color: #ffffffee;
+  height: 30px;
+  text-align: start;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 10px;
 `;
 // export const HeaderLinkUs = styled.div`
 //   cursor: pointer;

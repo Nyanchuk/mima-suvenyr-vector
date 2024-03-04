@@ -14,6 +14,16 @@ import ten from './img/clients/10.png'
 import elvn from './img/clients/11.jpeg'
 import tvlv from './img/clients/12.png'
 import Slider from "react-slick";
+import manager from './img/plus/casino-manager.png'
+import plan from './img/plus/action-plan.png'
+import design from './img/plus/project.png'
+import setting from './img/plus/settings.png'
+import control from './img/plus/quality-control.png'
+import opinion from './img/plus/opinion.png'
+import medal_point from './img/medal.png'
+import laser from './img/plus/three-friends-reading-from-books-notebook-library.jpg'
+import desin from './img/plus/loon-image-original (1).jpeg'
+import even from './img/plus/loon-image-high (1).jpeg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -80,7 +90,30 @@ const settings = {
                 <S.Main_section_two>
                 <S.MainInfo>Сотрудничая с СУВЕНИРНЫМ ВЕКТОРОМ, <span style={{ color: '#fbc663ef',fontWeight:'bold' }}>вы получаете:</span></S.MainInfo>
                 <S.Main_section_plus>
-                  
+                  <S.Main_plus_info>
+                    <S.Main_plus_img src={manager}></S.Main_plus_img>
+                    <div>Персональное сопровождение при оформлении заказа</div>
+                  </S.Main_plus_info>
+                  <S.Main_plus_info>
+                    <S.Main_plus_img src={design}></S.Main_plus_img>
+                    <div>Возможность выбора из ассортимента оригинальной продукции</div>
+                  </S.Main_plus_info>
+                  <S.Main_plus_info>
+                    <S.Main_plus_img src={setting}></S.Main_plus_img>
+                    <div>Партнера, постоянно оптимизирующего процессы производства и технологию</div>
+                  </S.Main_plus_info>
+                  <S.Main_plus_info>
+                    <S.Main_plus_img src={plan}></S.Main_plus_img>
+                    <div>Неограниченные варианты дизайна, подходящего вашему бренду</div>
+                  </S.Main_plus_info>
+                  <S.Main_plus_info>
+                    <S.Main_plus_img src={control}></S.Main_plus_img>
+                    <div>Партнера, гарантирующего высокое качество товара в установленные сроки</div>
+                  </S.Main_plus_info>
+                  <S.Main_plus_info>
+                    <S.Main_plus_img src={opinion}></S.Main_plus_img>
+                    <div>Качество, проверенное нашими многочисленными клиентами</div>
+                  </S.Main_plus_info>
                 </S.Main_section_plus>
                 {/* <S.MainInfo_slogan>Мы, компания Сувенирный вектор, на сувенирном рынке более 20 лет. Основным направлением нашей деятельности является изготовление качественной сувенирной продукции, включающей в себя широкий ассортимент различных изделий от бюджетных промо-сувениров до изысканных подарков VIP-класса по индивидуальным заказам, а также эксклюзивные сувениры ручной работы.</S.MainInfo_slogan> */}
                 <S.HeaderLinkUs></S.HeaderLinkUs>
@@ -90,35 +123,43 @@ const settings = {
               </S.MainParallax>
             </S.Parallax>
             <S.MainBody>
-              <S.MainInfo>ПОЧЕМУ НУЖНО ВЫБРАТЬ ИМЕННО НАС?</S.MainInfo>
+              <S.MainInfo>Наша проверенная <span style={{ color: '#fbc663ef',fontWeight:'bold' }}>методология успеха</span> включает 3 шага:</S.MainInfo>
               <S.MainWhy>
                 <S.MainItems>
-                  <S.MainItem></S.MainItem>
-                  <S.MainItem></S.MainItem>
-                  <S.MainItem></S.MainItem>
-                  <S.MainItem></S.MainItem>
-                  <S.MainItem></S.MainItem>
+                  <S.MainItem src={medal_point}/>
+                  <S.ItemPount>1</S.ItemPount>
+                  <div>
+                    <S.MainItemText>КОНЦЕПТУАЛИЗАЦИЯ</S.MainItemText>
+                    <S.MainItemTextInfo>Положитесь на более чем 20-летний опыт! Мы внимательно прорабатываем концепцию каждого сувенира, чтобы он соответствовал вашим ожиданиям и требованиям.</S.MainItemTextInfo>
+                  </div>
+                  
+                  <S.MainItemImg src={laser}></S.MainItemImg>
+                </S.MainItems>
+                <S.MainItems>
+                  <S.MainItem src={medal_point}/>
+                  <S.ItemPount>2</S.ItemPount>
+                  <div>
+                    <S.MainItemText>ВОПЛОЩЕНИЕ ИДЕИ</S.MainItemText>
+                    <S.MainItemTextInfo>Наши опытные дизайнеры готовы воплотить вашу уникальную идею в оригинальный и качественный сувенир, который будет радовать вас и ваших клиентов</S.MainItemTextInfo>
+                  </div>
+                  
+                  <S.MainItemImg src={desin}></S.MainItemImg>
+                </S.MainItems>
+                <S.MainItems>
+                  <S.MainItem src={medal_point}/>
+                  <S.ItemPount>3</S.ItemPount>
+                  <div>
+                  <S.MainItemText>ПАМЯТНОЕ СОБЫТИЕ</S.MainItemText>
+                    <S.MainItemTextInfo>Каждый созданный нами сувенир станет значимым символом вашего важного события или мероприятия, добавляя яркие воспоминания и эмоции в этот особенный день.</S.MainItemTextInfo>
+                  </div>
+                  <S.MainItemImg src={even}></S.MainItemImg>
                 </S.MainItems>
                 <S.MainItemsTwo>
-                  <S.MainItemText>Мы тщательно исследуем рынок и анализируем конкурентов, для нас важно всегда оставаться на первом месте!</S.MainItemText>
-                  <S.MainItemText>Мы организуем контроль качества нашей продукции на каждом этапе производства!</S.MainItemText>
-                  <S.MainItemText>Наша производственная площадка оснащена современным оборудованием, которое позволяет качественно и в срок изготавливать продукцию!</S.MainItemText>
-                  <S.MainItemText>Для вашего удобства мы постоянно оптимизируем процессы производства и внедряем новые технологии!</S.MainItemText>
-                  <S.MainItemText>Мы разрабатываем дизайн на основе последних тенденций!</S.MainItemText>
+                  
+                  
                 </S.MainItemsTwo>
               </S.MainWhy>
-              <S.HeaderLinkUs>СВЯЗАТЬСЯ С НАМИ</S.HeaderLinkUs>
-            </S.MainBody>
-          </S.MainImgBottom>
-          <S.MainImgBottom>
-            <S.Parallax>
-              <S.MainParallax>
-                <S.MainParallaxSlogan>Вы обязательно найдете у нас то, что вам нужно!</S.MainParallaxSlogan>
-              </S.MainParallax>
-            </S.Parallax>
-            <S.MainBody>
-              <S.MainInfo>КАК МЫ РАБОТАЕМ:</S.MainInfo>
-  
+              <S.HeaderLinkUs></S.HeaderLinkUs>
             </S.MainBody>
           </S.MainImgBottom>
         </S.Main>
