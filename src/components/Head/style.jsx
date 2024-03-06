@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Body = styled.div`
-padding-top: 30px;
+
     position: relative;
 `
 
@@ -16,7 +16,7 @@ export const VideoWrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 500px;
+    height: 550px;
     object-fit: cover;
 }
 `;
@@ -32,6 +32,7 @@ export const BodyBurger = styled.div`
     align-items: center;
 `;
 export const BurgerTop = styled.div`
+    padding-top: 80px;
     width: 100%;
     height: 100px;
     display: flex;

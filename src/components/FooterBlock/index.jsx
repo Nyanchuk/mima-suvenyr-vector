@@ -2,8 +2,6 @@ import * as S from "./style";
 import React  from 'react';
 import { useState } from "react";
 import add_photo from '../../img/add-image.png';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 function FooterBlock() {
       // Стейт для хранения фото перед отправкой
