@@ -2,10 +2,6 @@ import * as S from "./style";
 import React, { useEffect, useRef } from 'react';
 import videojs from "video.js";
 import logo from '../../img/лого 3.png';
-import Whatsapp from '../../img/whatsapp-rbxF_O0J3-transformed.png';
-import Telegram from '../../img/telegram-transformed.png';
-import Vk from '../../img/vk-aUz8tQfdS-transformed.png';
-import Insta from '../../img/insta-transformed.png';
 import videoMP4 from '../../video/Мой фильм 2.mp4'
 
 
