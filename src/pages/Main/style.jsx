@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
-import parallax from "../../img/img:66.svg";
+import parallax from "../../img/img_66.webp";
 import medal from "../../img/loon-image-original.jpeg";
-import img1 from "../../img/3PPL_GRP-b1263dab.webp";
-import img2 from "../../img/img2.webp";
+import img1 from "../../img/5555.webp";
+import img2 from "../../img/333344.webp";
 import parts1 from "../../img/Parts/loon1.jpeg";
 import parts2 from "../../img/Parts/loon2.jpg";
 import parts3 from "../../img/Parts/loon3.jpg";
@@ -90,8 +90,8 @@ export const Main_section_container = styled.div`
   gap: 25px;
 `;
 export const Main_section_img = styled.div`
-  height: 420px;
-  width: 450px;
+  height: 550px;
+  width: 550px;
   background-image: url(${img1});
   background-size: contain;
   background-repeat: no-repeat;
@@ -448,8 +448,8 @@ export const Main_sectionTwo = styled.div`
   background-position: center;
 `;
 export const Main_section_two_img = styled.div`
-  height: 420px;
-  width: 470px;
+  height: 550px;
+  width: 550px;
   background-image: url(${img2});
   background-size: contain;
   background-repeat: no-repeat;
