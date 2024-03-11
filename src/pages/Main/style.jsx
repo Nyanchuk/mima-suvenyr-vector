@@ -47,7 +47,7 @@ export const Main_links = styled.div`
   padding-bottom: 20px;
   color: #fbc663ef;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 18px;
   border-bottom: 1px solid #fbc663ef;
   border-top: 1px solid #fbc663ef;
 `;
@@ -75,15 +75,15 @@ export const Main_section_one = styled.div`
 export const Main_section_container = styled.div`
   position: absolute;
   z-index: 999;
-  top: 50%; /* Положение блока относительно верхнего края */
-  left: 50%; /* Положение блока относительно левого края */
+  top: 50%;
+  left: 50%;
   height: 420px;
-  max-width: 900px;
+  max-width: 1000px;
   opacity: 1;
   transform: translate(
     -50%,
     -50%
-  ); /* Центрирование блока по вертикали и горизонтали */
+  ); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +106,7 @@ export const Main_section_title = styled.div`
   width: 450px;
   color: #fbc663ef;
   font-weight: 300;
-  font-size: 32px;
+  font-size: 24px;
 `;
 export const HeaderLinkUs = styled.div`
   cursor: pointer;
@@ -330,14 +330,16 @@ export const Main_Link_img = styled.div`
   font-size: 28px;
 `;
 export const GridContainer = styled.div`
+padding-left: 25px;
+padding-right: 25px;
   display: grid;
   grid-template-rows: auto auto; /* Определяем 2 строки */
   grid-template-columns: repeat(3, 1fr); /* Определяем 3 столбца */
-  gap: 5px;
+  gap: 25px;
 `;
 export const Link__with_block = styled.div`
   position: relative;
-  height: 300px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;

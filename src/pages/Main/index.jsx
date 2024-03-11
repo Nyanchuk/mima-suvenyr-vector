@@ -53,8 +53,11 @@ const settings = {
         <S.Main>
           <S.Main_links>
             <S.Main_link>СУВЕНИРЫ</S.Main_link>
-            <S.Main_link>ЗНАКИ ОТЛИЧИЯ</S.Main_link>
+            <S.Main_link>ЗНАЧКИ</S.Main_link>
             <S.Main_link>МЕДАЛИ</S.Main_link>
+            <S.Main_link>УПАКОВКА</S.Main_link>
+            <S.Main_link>БРЕНДИРОВАНИЕ</S.Main_link>
+            <S.Main_link>ОТКРЫТКИ</S.Main_link>
           </S.Main_links>
           {/* Блок с картинкой */}
           <S.Section>
@@ -269,6 +272,9 @@ const settings = {
             </S.SectionTwo>
           </S.MainImgBottom>
           <S.Main_links>
+            <S.Main_link>СУВЕНИРЫ</S.Main_link>
+            <S.Main_link>ЗНАЧКИ</S.Main_link>
+            <S.Main_link>МЕДАЛИ</S.Main_link>
             <S.Main_link>УПАКОВКА</S.Main_link>
             <S.Main_link>БРЕНДИРОВАНИЕ</S.Main_link>
             <S.Main_link>ОТКРЫТКИ</S.Main_link>

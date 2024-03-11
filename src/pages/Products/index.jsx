@@ -1,12 +1,11 @@
 import { useParams } from "react-router-dom";
-import HeadProduct from "../../components/HeadProducts";
+import Head from "../../components/Head";
 
 export const Products = () => {
     let { id } = useParams();
     return (
         <div>
-            <HeadProduct idProducts = {id} />
-
+            <Head idProducts = {id} />
         </div>
     );
 };

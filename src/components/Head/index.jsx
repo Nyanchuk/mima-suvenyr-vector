@@ -1,39 +1,47 @@
-import * as S from "./style";
-import React, { useEffect, useRef } from 'react';
-import videojs from "video.js";
+import styles from './style.module.css';
+import React from 'react';
 import logo from '../../img/лого 3.png';
 import videoMP4 from '../../video/Мой фильм 2.mp4'
+import { Link, useNavigate } from 'react-router-dom';
 
+function Head({ idProducts }) {
+  const navigate = useNavigate();
+  const productTitles = {
+    1: { title: "УПАКОВКА", slogan: "Лучшие упаковочные решения" },
+    2: { title: "ОТКРЫТКИ", slogan: "Индивидуальные открытки для ваших поздравлений" },
+    3: { title: "БРЕНДИРОВАНИЕ", slogan: "Создаем уникальный бренд для вашего продукта" },
+    4: { title: "СУВЕНИРЫ", slogan: "Оригинальные сувениры на любой вкус" },
+    5: { title: "ЗНАЧКИ", slogan: "Качественные значки с вашим логотипом" },
+    6: { title: "МЕДАЛИ", slogan: "Памятные медали для важных событий" }
+  };
+  const titleInfo = idProducts ? productTitles[idProducts] : { title: "СУВЕНИРНЫЙ ВЕКТОР", slogan: "Комплексный подход в разработке сувенирной продукции" };
 
-function Head() {
   return (
-    <S.Body>
-      <S.VideoWrapper>
-        <video  id="my-video" autoPlay muted loop width="100%" height="100%">
+    <div className={styles.header}>
+      <div className={styles.header_top}>
+        <div className={styles.header__top_content}>
+          <Link to="/">
+            <img className={styles.logo} src={logo} alt="logo" /> 
+          </Link>
+          <div className={styles.links}>
+            <Link to="/" className={styles.link}>ГЛАВНАЯ</Link>
+            <a className={styles.link}>ПРОДУКТЫ</a>
+            <a className={styles.link}>ОТРАСЛИ</a>
+            <div className={styles.button_top}></div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.header_video}>
+        <video className={styles.video} id="my-video" autoPlay muted loop width="100%" height="100%">
           <source src={videoMP4} type="video/mp4" />
         </video>
-      </S.VideoWrapper>
-      <S.BodyBurger>
-        <S.HeaderImg src={logo} alt="logo" />
-        <S.BurgerTop>
-          <S.BurgerTop2>
-            <S.HeaderLink to="/">ГЛАВНАЯ</S.HeaderLink>
-            <S.HeaderLink to="/products">ПРОДУКТЫ</S.HeaderLink>
-          </S.BurgerTop2>
-        </S.BurgerTop>
-      </S.BodyBurger>
-      <S.HeaderBottom>
-      <S.HeaderTitle>СУВЕНИРНЫЙ ВЕКТОР</S.HeaderTitle>
-        <S.HeaderSlogan>Комплексный подход в разработке сувенирной продукции</S.HeaderSlogan>
-        {/* <S.Images>
-          <S.HeaderContact src={Whatsapp} alt="Whatsapp" ></S.HeaderContact>
-          <S.HeaderContact src={Telegram} alt="Telegram" ></S.HeaderContact>
-          <S.HeaderContact src={Vk} alt="Vk" ></S.HeaderContact>
-          <S.HeaderContact src={Insta} alt="Insta" ></S.HeaderContact>
-        </S.Images> */}
-        <S.HeaderLinkUs></S.HeaderLinkUs>
-      </S.HeaderBottom>
-    </S.Body>
+      </div>
+      <div className={styles.header__bottom}>
+        <div className={styles.header__title}>{titleInfo.title}</div>
+        <div className={styles.slogan}>{titleInfo.slogan}</div>
+        <div className={styles.button_top}></div>
+      </div>
+    </div>
   );
 }
 
