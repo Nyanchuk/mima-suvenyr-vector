@@ -2,9 +2,10 @@ import * as S from "./style";
 import React  from 'react';
 import { useState } from "react";
 import add_photo from '../../img/add-image.png';
+import logo from '../../img/logotip.png';
 
 function FooterBlock() {
-      // Стейт для хранения фото перед отправкой
+  // Стейт для хранения фото перед отправкой
   const [photos, setPhotos] = useState([]);
   // Обработка файла (футер)
   const handleImageUpload = (event) => {
@@ -63,16 +64,22 @@ function FooterBlock() {
                 <S.footerTitle>ВСЕ ЕЩЕ СОМНЕВАЕТЕСЬ? </S.footerTitle>
                 <S.footerMassage>
                   <S.footerImg className="footer-one"/>
-                  <span>Задайте вопрос</span>
-                  <span style={{ color: 'aliceblue', fontSize: '14px', fontWeight: '400' }}>sv428726@mail.ru</span>
+                  <S.Contacts>
+                    <span>Задайте вопрос</span>
+                    <span style={{ color: 'aliceblue', fontSize: '14px', fontWeight: '400' }}>sv428726@mail.ru</span>
+                  </S.Contacts>
                 </S.footerMassage>
                 <S.footerMassage>
                   <S.footerImg className="footer-two"/>
+                  <S.Contacts>
                   <span>Поговорите с нами</span>
                   <span style={{ color: 'aliceblue', fontSize: '14px', fontWeight: '400' }}>8 (914) 772 31 30</span>
+                  </S.Contacts>
+                  
                 </S.footerMassage>
                 <S.footerMassage>
                   <S.footerImg className="footer-three"/>
+                  <S.Contacts>
                   <span>Напишите нам</span>
                   <S.Message>
                     <S.footerImgMessage className="whatsapp" href="https://wa.me/79147723130?text=Здравствуйте,%20"/>
@@ -80,17 +87,22 @@ function FooterBlock() {
                     <S.footerImgMessage className="vk" href="https://vk.com/s_vektor_27"/>
                     <S.footerImgMessage className="instagramm" href="https://instagram.com/s_vektor27?igshid=hsy8plihxfwb"/>
                   </S.Message>
+                  </S.Contacts>
                 </S.footerMassage>
                 <S.footerMassage>
                   <S.footerImg className="footer-fore"/>
+                  <S.Contacts>
                   <span>Найдите нас</span>
-                  <span style={{ color: 'aliceblue', fontSize: '14px', fontWeight: '400' }}>Хабаровск, ул. Горького 57 А, литер В</span>
+                  <span style={{ color: 'aliceblue', fontSize: '14px', fontWeight: '400',textAlign: 'start' }}>Хабаровск, ул. Горького 57 А, литер В</span>
+                  </S.Contacts>
                 </S.footerMassage>
                 <S.Confedention>Мы ценим вашу конфиденциальность. СУВЕНИРНЫЙ ВЕКТОР использует предоставленные вами данные, чтобы связаться с вами относительно вашего заказа. Дополнительную информацию можно найти в нашей <a style={{ textDecoration: 'underline'}}>Политике конфиденциальности.</a> </S.Confedention>
               </S.Form>
               <S.Form>
                 <S.FormInputs>
-                  <span style={{ color: 'rgb(20, 34, 49)', fontWeight:'700', fontSize: '29.5px' }}>ФОРМА ОБРАТНОЙ СВЯЗИ</span>
+                <S.ImputOne_contein_logo>
+                    <span style={{ color: 'rgb(20, 34, 49)', fontWeight:'600', fontSize: '24px' }}>ФОРМА ОБРАТНОЙ СВЯЗИ</span>
+                  </S.ImputOne_contein_logo>
                   <S.ImputOne_contein>
                     <S.ImputOne>
                     <span>Имя</span>
@@ -136,7 +148,7 @@ function FooterBlock() {
                           )}
                         </div>
                       ))}
-                          {[...Array(Math.max(0, 5 - photos.length))].map((_, index) => (
+                          {[...Array(Math.max(0, 4 - photos.length))].map((_, index) => (
                           <div key={index} title="Загрузите файлы, чтобы помочь нам понять ваши предпочтения">
                             <input 
                               type="file" 

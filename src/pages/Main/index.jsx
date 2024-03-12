@@ -25,13 +25,17 @@ import medal_point from "../../img/medal.png";
 import laser from "../../img/plus/three-friends-reading-from-books-notebook-library.jpg";
 import desin from "../../img/plus/loon-image-original (1).jpeg";
 import even from "../../img/plus/loon-image-high (1).jpeg";
+import sber from '../../img/clients/sber.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from 'react-router-dom';
+import { Link, animateScroll as scroll } from "react-scroll";
+import { useRef } from "react";
 
 
 export const Main = () => {
     const navigate = useNavigate();
+    const footerRef = useRef();
     const handleItemClick = (id) => {
         navigate(`/product/${id}`);
       };
@@ -46,18 +50,27 @@ const settings = {
     autoplaySpeed: 1500,
     arrows: false,
   };
+
+  const handleClick = () => {
+    scroll.scrollToBottom({
+      duration: 3000,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    });
+  };
+
   return (
     <div>
       <Head />
       <S.Wrapper>
         <S.Main>
           <S.Main_links>
-            <S.Main_link>СУВЕНИРЫ</S.Main_link>
-            <S.Main_link>ЗНАЧКИ</S.Main_link>
-            <S.Main_link>МЕДАЛИ</S.Main_link>
-            <S.Main_link>УПАКОВКА</S.Main_link>
-            <S.Main_link>БРЕНДИРОВАНИЕ</S.Main_link>
-            <S.Main_link>ОТКРЫТКИ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(4)}>СУВЕНИРЫ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(5)}>ЗНАЧКИ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(6)}>МЕДАЛИ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(1)}>УПАКОВКА</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(3)}>БРЕНДИРОВАНИЕ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(2)}>ОТКРЫТКИ</S.Main_link>
           </S.Main_links>
           {/* Блок с картинкой */}
           <S.Section>
@@ -68,7 +81,7 @@ const settings = {
                 <div>
                   Сделайте так, чтобы ваши награды вызывали эмоции у людей
                 </div>
-                <S.HeaderLinkUs></S.HeaderLinkUs>
+                <S.HeaderLinkUs onClick={() => handleClick()}></S.HeaderLinkUs>
               </S.Main_section_title>
             </S.Main_section_container>
           </S.Section>
@@ -114,6 +127,9 @@ const settings = {
                 </div>
                 <div>
                   <S.Main_img src={tvlv} />
+                </div>
+                <div>
+                  <S.Main_img src={sber} />
                 </div>
               </Slider>
             </S.Slice>
@@ -171,7 +187,7 @@ const settings = {
                     </S.Main_plus_info>
                   </S.Main_section_plus>
                   {/* <S.MainInfo_slogan>Мы, компания Сувенирный вектор, на сувенирном рынке более 20 лет. Основным направлением нашей деятельности является изготовление качественной сувенирной продукции, включающей в себя широкий ассортимент различных изделий от бюджетных промо-сувениров до изысканных подарков VIP-класса по индивидуальным заказам, а также эксклюзивные сувениры ручной работы.</S.MainInfo_slogan> */}
-                  <S.HeaderLinkUs></S.HeaderLinkUs>
+                  <S.HeaderLinkUs onClick={() => handleClick()}></S.HeaderLinkUs>
                 </S.Main_section_two>
               </S.MainParallax>
             </S.Parallax>
@@ -224,7 +240,7 @@ const settings = {
                   <S.MainItemImg src={even}></S.MainItemImg>
                 </S.MainItems>
               </S.MainWhy>
-              <S.HeaderLinkUs></S.HeaderLinkUs>
+              <S.HeaderLinkUs onClick={() => handleClick()}></S.HeaderLinkUs>
             </S.MainBody>
             <S.Main_Link_img>
               <div>
@@ -234,11 +250,9 @@ const settings = {
                 </div>
               </div>
               <S.GridContainer>
-                
-                    <S.Link__with_block  className="part_one" onClick={() => handleItemClick(1)}>
-                    <S.WitchSpan>УПАКОВКА</S.WitchSpan>
-                    </S.Link__with_block>
-                
+                <S.Link__with_block  className="part_one" onClick={() => handleItemClick(1)}>
+                  <S.WitchSpan>УПАКОВКА</S.WitchSpan>
+                </S.Link__with_block>
                 <S.Link__with_block className="part_two" onClick={() => handleItemClick(2)}>
                   <S.WitchSpan>ОТКРЫТКИ</S.WitchSpan>
                 </S.Link__with_block>
@@ -256,7 +270,7 @@ const settings = {
                 </S.Link__with_block>
               </S.GridContainer>
               <S.MainLink>
-                <S.MainLinkUs></S.MainLinkUs>
+                <S.MainLinkUs onClick={() => handleClick()}></S.MainLinkUs>
               </S.MainLink>
             </S.Main_Link_img>
             <S.SectionTwo>
@@ -266,18 +280,18 @@ const settings = {
                 <S.Main_section_titleTwo>
                   <div>НЕ БЕСПОКОЙТЕСЬ! МЫ ЗАСТАВИМ ИХ</div>
                   <S.Main_bottom_text>УДИВИТЬСЯ</S.Main_bottom_text>
-                  <S.HeaderLinkUs></S.HeaderLinkUs>
+                  <S.HeaderLinkUs onClick={() => handleClick()}></S.HeaderLinkUs>
                 </S.Main_section_titleTwo>
               </S.Main_section_container>
             </S.SectionTwo>
           </S.MainImgBottom>
           <S.Main_links>
-            <S.Main_link>СУВЕНИРЫ</S.Main_link>
-            <S.Main_link>ЗНАЧКИ</S.Main_link>
-            <S.Main_link>МЕДАЛИ</S.Main_link>
-            <S.Main_link>УПАКОВКА</S.Main_link>
-            <S.Main_link>БРЕНДИРОВАНИЕ</S.Main_link>
-            <S.Main_link>ОТКРЫТКИ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(4)}>СУВЕНИРЫ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(5)}>ЗНАЧКИ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(6)}>МЕДАЛИ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(1)}>УПАКОВКА</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(3)}>БРЕНДИРОВАНИЕ</S.Main_link>
+            <S.Main_link onClick={() => handleItemClick(2)}>ОТКРЫТКИ</S.Main_link>
           </S.Main_links>
           <FooterBlock />
         </S.Main>

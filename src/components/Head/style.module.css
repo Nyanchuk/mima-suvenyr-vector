@@ -1,134 +1,435 @@
 .header {
-    position: relative;
+  position: relative;
 }
 .header_top {
-    position: fixed;
-    z-index: 99999;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 100%; 
-    box-sizing: border-box; 
-    height: auto;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(20, 34, 49);
+  position: fixed;
+  z-index: 99999;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 34, 49);
+  border-bottom: 1px solid #fbc663ef;
 }
 .header__top_content {
-    width: 1920px;
-    display: flex;
-    justify-content: space-between;
+  width: 1600px;
+  display: flex;
+  justify-content: space-between;
 }
 .logo {
-    width: 70px;
+  width: 180px;
 }
 .links {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
 }
 .link {
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-    color: #fbc663ef;
-    font-size: 18px;
-    font-weight: 300;
-    transition: all .3s;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  color: #fbc663ef;
+  font-size: 18px;
+  font-weight: 300;
+  transition: all 0.3s;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .link:hover {
-    color: #c59b4cee;
+  color: #c59b4cee;
 }
-.button_top {
+.button_buttom {
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
     font-size: 18px;
-    transition: all .3s;
+    transition: all 0.3s;
 }
-.button_top::before {
-    content: "СДЕЛАТЬ ЗАКАЗ";
+.button_buttom::before {
+    content: "ОФОРМИТЬ ЗАЯВКУ";
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-weight: 500;
-    width: 200px;
+    width: 250px;
     height: 50px;
     border-radius: 5px;
-    background-image: 
-      linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%),
+    background-image: linear-gradient(
+        45deg,
+        #c69230 20%,
+        #fff9b2 50%,
+        #ae792b 100%
+      ),
       linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%);
-    background-size: 200% 100%; 
+    background-size: 200% 100%;
     transition: background-position 0.3s;
     z-index: -1;
 }
-.button_top:hover::before {
-    background-position: 100% 0, 0 100%; 
+.button_buttom:hover::before {
+    background-position: 100% 0, 0 100%;
   }
-  .button_top:active {
-    transform: scale(.95);
+  .button_buttom:active {
+    transform: scale(0.95);
+  }
+.button_top {
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.button_top::before {
+  content: "СДЕЛАТЬ ЗАКАЗ";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+      45deg,
+      #c69230 20%,
+      #fff9b2 50%,
+      #ae792b 100%
+    ),
+    linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%);
+  background-size: 200% 100%;
+  transition: background-position 0.3s;
+  z-index: -1;
+}
+.button_top:hover::before {
+  background-position: 100% 0, 0 100%;
+}
+.button_top:active {
+  transform: scale(0.95);
 }
 .header_video {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .video {
-    position: absolute;
-    z-index: -99;
-    opacity: .4;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 580px;
-    object-fit: cover;
+  position: absolute;
+  z-index: -99;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 680px;
+  object-fit: cover;
 }
 .header__bottom {
-    margin-top: 230px;
-    padding-bottom: 80px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    gap: 45px;
-    height: auto;
+  margin-top: 228px;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 45px;
+  height: auto;
 }
 .header__title {
-    font-weight: 500;
-    font-size: 64px;
-    padding: 15px;
-    position: relative;
+  font-weight: 500;
+  font-size: 64px;
+  padding: 15px;
+  position: relative;
 }
 .header__title::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    border: 1px solid transparent;
-    background-image: 
-        linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%),
-        linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%);
-    background-size: 200% 100%; /* Два слоя градиента */
-    transition: background-position 0.3s; /* Добавляем переход для плавного изменения градиента */
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(
+      45deg,
+      #c69230 20%,
+      #fff9b2 50%,
+      #ae792b 100%
+    ),
+    linear-gradient(45deg, #c69230 20%, #fff9b2 50%, #ae792b 100%);
+  background-size: 200% 100%; /* Два слоя градиента */
+  transition: background-position 0.3s; /* Добавляем переход для плавного изменения градиента */
+  z-index: -1;
 }
 .header__title:hover::before {
-    background-position: 100% 0, 0 100%; /* Переключаемся между двумя слоями градиента */
-  }
+  background-position: 100% 0, 0 100%; /* Переключаемся между двумя слоями градиента */
+}
 .slogan {
-    font-weight: 300;
-    max-width: 700px;
-    font-size: 18px;
-    color: #e5e5e5;
+  font-weight: 300;
+  max-width: 700px;
+  font-size: 18px;
+  color: #e5e5e5;
+}
+
+/* Выпадающий список */
+.dropdownMenu {
+  position: absolute;
+  left: -15%;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+  padding: 15px;
+  width: 170px;
+  height: auto;
+  background-color: rgb(20, 34, 49);
+  border-radius: 5px;
+}
+.dropdownMenu_link {
+  cursor: pointer;
+  color: #fbc663ef;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.dropdownMenu_link:hover {
+  color: #b18e4bef;
+}
+/* Модальное окно */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(20, 34, 49, 0.377);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+}
+.modalContent {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  gap: 25px;
+}
+.modal_form {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+.form_title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fbc663;
+}
+.form_imputs {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 25px;
+}
+.form_imput {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form_imputs_logo {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fbc663;
+}
+.form_text {
+  outline: none;
+  font-family: Montserrat;
+  width: 150px;
+  height: auto;
+  padding: 8px;
+  color: rgb(20, 34, 49);
+  font-weight: 300;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid rgb(20, 34, 49);
+  background-color: transparent;
+}
+.form_text::placeholder {
+  color: rgba(20, 34, 49, 0.6);
+  font-size: 14px;
+  font-weight: 100px;
+}
+.form_textarea {
+  width: 350px;
+  resize: none;
+  height: 80px;
+  background-color: rgba(20, 34, 49, 0.1);
+  border: 1px solid transparent;
+  padding: 5px;
+  color: rgb(20, 34, 49);
+  font-family: Montserrat;
+  font-size: 16px;
+  scrollbar-width: thin;
+  border-bottom: 1px solid rgb(20, 34, 49);
+  scrollbar-color: rgb(20, 34, 49) transparent;
+}
+.form_textarea:focus {
+  outline: none;
+}
+.form_textarea::placeholder {
+  color: rgba(20, 34, 49, 0.5);
+}
+.files {
+  display: flex;
+  align-items: start;
+  gap: 14px;
+}
+.delete_img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.add_img {
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  object-fit: cover;
+}
+.file_obj {
+  width: 100%;
+  height: 100%;
+}
+.delete {
+  cursor: pointer;
+  color: rgba(20, 34, 49, 0.858);
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  font-size: 11px;
+  width: 60px;
+  height: 30px;
+  border: 1px solid #fbc663;
+  border-radius: 5px;
+  background-color: #fbc663;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+.delete:hover {
+  background-color: #d7a445;
+  border: 1px solid transparent;
+}
+.check_box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid rgba(20, 34, 49, 0.7);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.check_box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid rgba(20, 34, 49, 0.7);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check_box.blinking {
+  animation: blinkAnimation 1s infinite;
+}
+
+.check_box:checked::after {
+  content: "✓";
+  font-size: 36px;
+  color: rgba(20, 34, 49, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.personal {
+  text-decoration: none;
+  color: rgb(20, 34, 49);
+  transition: all 0.3s;
+}
+.personal:hover {
+  text-decoration: none;
+  color: #d7a445;
+}
+.button_modal_add {
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    width: 165px;
+    height: 40px;
+    background-color: #fbc663;
+    border: 1px solid #fbc663;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.button_modal_add:hover {
+    background-color: #cfa049;
+    border: 1px solid #cfa049;
+}
+.button_modal_add:active {
+    transform: scale(.95);
+}
+.button_modal_delete {
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    width: 165px;
+    height: 40px;
+    background-color: #e2e2e2;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.button_modal_delete:hover {
+    background-color: #d6d6d6;
+    border: 1px solid #d6d6d6;
+}
+.button_modal_delete:active {
+    transform: scale(.95);
+}
+.logo_modal {
+    width: 100px;
 }

@@ -27,22 +27,22 @@ export const Footer = styled.div`
 export const Form = styled.div`
   max-width: 450px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 35px;
+  justify-content: space-between;
+  gap: 50px;
 `;
 export const FormInputs = styled.form`
   background-color: aliceblue;
   border-radius: 20px;
   color: rgb(20, 34, 49);
-  padding: 35px;
+  padding: 25px;
   width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 35px;
+  gap: 25px;
   font-size: 18px;
 `;
 export const ImputOne = styled.div`
@@ -52,13 +52,19 @@ export const ImputOne = styled.div`
 `;
 export const ImputOne_contein = styled.div`
   display: flex;
-  gap: 35px;
+  gap: 25px;
 `;
+export const ImputOne_contein_logo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`
 export const InputItem = styled.input`
   outline: none;
   font-family: Montserrat;
-  margin-top: 5px;
-  width: 180px;
+  width: 175px;
   height: auto;
   padding: 8px;
   color: rgb(20, 34, 49);
@@ -74,8 +80,8 @@ export const InputItem = styled.input`
   }
 `;
 export const Textarea = styled.textarea`
-  margin-top: 15px;
-  width: 420px;
+  margin-top: 10px;
+  width: 390px;
   resize: none;
   height: 80px;
   background-color: rgba(20, 34, 49, 0.1);
@@ -95,16 +101,16 @@ export const Textarea = styled.textarea`
   }
 `;
 export const AddImg = styled.img`
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   box-sizing: border-box;
   border: 1px solid transparent;
   object-fit: cover;
 `;
 export const DeleteImg = styled.div`
   position: relative;
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
 `;
 export const ButtonDeleteImg = styled.button`
   cursor: pointer;
@@ -132,8 +138,8 @@ export const Object = styled.object`
 export const ImputTwo = styled.div`
   margin-top: 15px;
   display: flex;
-  align-items: start;
-  gap: 10px;
+  align-items: center;
+  gap: 20px;
 `;
 export const CheckboxWrapper = styled.div`
   position: relative;
@@ -245,12 +251,20 @@ export const footerTitle = styled.span`
 `;
 export const footerMassage = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  gap: 15px;
   align-items: center;
-  justify-content: center;
   font-size: 18px;
 `;
+export const Contacts = styled.div`
+  width: 250px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding-left: 15px;
+  border-left: 1px solid #fbc663ef;
+`
 export const footerImg = styled.div`
   width: 60px;
   height: 60px;

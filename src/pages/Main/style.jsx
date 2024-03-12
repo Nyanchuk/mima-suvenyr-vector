@@ -3,12 +3,12 @@ import parallax from "../../img/img_66.webp";
 import medal from "../../img/loon-image-original.jpeg";
 import img1 from "../../img/5555.webp";
 import img2 from "../../img/333344.webp";
-import parts1 from "../../img/Parts/loon1.jpeg";
-import parts2 from "../../img/Parts/loon2.jpg";
-import parts3 from "../../img/Parts/loon3.jpg";
-import parts4 from "../../img/Parts/loon4.jpg";
-import parts5 from "../../img/Parts/loon5.jpg";
-import parts6 from "../../img/Parts/66.jpg";
+import parts1 from "../../img/iloveimg-compressed/loon1.jpeg";
+import parts2 from "../../img/iloveimg-compressed/loon2.jpg";
+import parts3 from "../../img/iloveimg-compressed/loon3.jpg";
+import parts4 from "../../img/iloveimg-compressed/loon4.jpg";
+import parts5 from "../../img/iloveimg-compressed/loon5.jpg";
+import parts6 from "../../img/iloveimg-compressed/66.jpg";
 
 const swingAnimation = keyframes`
   0% {
@@ -53,7 +53,7 @@ export const Main_links = styled.div`
 `;
 export const Main_link = styled.div`
   cursor: pointer;
-  width: 350px;
+  width: 300px;
   transition: all 0.3s;
   &:hover {
     color: #c59b4cee;
@@ -80,10 +80,7 @@ export const Main_section_container = styled.div`
   height: 420px;
   max-width: 1000px;
   opacity: 1;
-  transform: translate(
-    -50%,
-    -50%
-  ); 
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,8 +327,8 @@ export const Main_Link_img = styled.div`
   font-size: 28px;
 `;
 export const GridContainer = styled.div`
-padding-left: 25px;
-padding-right: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   display: grid;
   grid-template-rows: auto auto; /* Определяем 2 строки */
   grid-template-columns: repeat(3, 1fr); /* Определяем 3 столбца */
@@ -375,16 +372,15 @@ export const WitchSpan = styled.span`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 280px;
+  height: 330px;
   padding: 10px;
   font-size: 32px;
   color: #ffffffec;
-  background-color: rgba(20, 34, 49, 0.398);
+  background-color: rgba(18, 53, 91, 0.398);
   transition: all 0.4s;
   &:hover {
-    opacity: 1;
-    background-color: rgba(20, 34, 49, 0.685);
-    text-shadow: 0 0 15px #000;
+    transform: scale(1.05);
+    background-color: rgba(18, 53, 91, 0.515);
   }
 `;
 export const MainLink = styled.div`
